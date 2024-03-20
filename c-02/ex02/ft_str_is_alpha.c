@@ -6,11 +6,16 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 19:59:50 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/20 20:03:57 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/20 20:21:44 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
+int ft_check_alpha(char c)
+{
+  return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+}
 
 ft_str_is_alpha(char *str)
 {
@@ -19,7 +24,7 @@ ft_str_is_alpha(char *str)
   i = 0;
   while (str[i] != '\0')
   {
-    if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')))
+    if (!ft_check_alpha(str[i]))
       return (0);
     i++;
   }
