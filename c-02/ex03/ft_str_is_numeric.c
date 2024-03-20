@@ -6,11 +6,16 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 20:13:51 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/20 20:14:22 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/20 20:24:35 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
+int ft_check_numeric(char c)
+{
+  return (c >= '0' && c <= '9');
+}
 
 int ft_str_is_numeric(char *str)
 {
@@ -19,7 +24,7 @@ int ft_str_is_numeric(char *str)
   i = 0;
   while (str[i] != '\0')
   {
-    if (!(str[i] >= '0' && str[i] <= '9'))
+    if (!ft_check_numeric(str[i]))
       return (0);
     i++;
   }
@@ -28,7 +33,7 @@ int ft_str_is_numeric(char *str)
 
 // int main(void)
 // {
-//   char str[] = "1234567890";
+//   char str[] = "123456789";
 //   printf("%d\n", ft_str_is_numeric(str));
 //   return (0);
 // }
