@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlowcase.c                                       :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/21 10:31:20 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/22 12:19:14 by dansam           ###   ########.fr       */
+/*   Created: 2024/03/22 12:20:20 by dansam            #+#    #+#             */
+/*   Updated: 2024/03/22 12:35:31 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strlowcase(char *str)
+int ft_check_alphanumeric(char c)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
-		i++;
-	}
-	return (str);
+	return ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
-
-// int main(void)
-// {
-// 	char str[] = "Hello, World!";
-// 	printf("%s\n", ft_strlowcase(str));
-// 	return (0);
-// }
