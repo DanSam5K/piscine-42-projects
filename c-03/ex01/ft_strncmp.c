@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 22:31:45 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/24 22:36:39 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/25 20:07:54 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int ft_strncmp(char *s1, char *s2, unsigned int n)
 	return (s1[i] - s2[i]);
 }
 
-int main()
-{
-	char s1[] = "Helloa";
-	char s2[] = "Hello";
-	printf("%d\n", ft_strncmp(s1, s2, 5));
-	return (0);
-}
+// int main()
+// {
+// 	char s1[] = "Helloa";
+// 	char s2[] = "Hello";
+// 	printf("%d\n", ft_strncmp(s1, s2, 5));
+// 	return (0);
+// }
