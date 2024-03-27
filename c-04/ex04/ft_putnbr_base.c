@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:27:29 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/27 15:40:27 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/27 15:46:07 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,14 @@ void ft_putnbr_base(int nbr, char *base)
 			write(1, &base[n], 1);
 	}
 }
+
+// int main()
+// {
+// 	ft_putnbr_base(123, "0123456789");
+// 	write(1, "\n", 1);
+// 	ft_putnbr_base(123, "01");
+// 	write(1, "\n", 1);
+// 	ft_putnbr_base(123, "0123456789ABCDEF");
+// 	write(1, "\n", 1);
+// 	ft_putnbr_base(123, "poneyvif");
+// }
