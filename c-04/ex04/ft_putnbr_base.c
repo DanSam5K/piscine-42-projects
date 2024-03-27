@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 15:27:29 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/27 15:39:20 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/27 15:40:27 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,28 @@ int ft_check_base(char *base)
 		i++;
 	}
 	return (1);
+}
+
+void ft_putnbr_base(int nbr, char *base)
+{
+	long n;
+	int len;
+
+	n = nbr;
+	len = ft_strlen(base);
+	if (ft_check_base(base))
+	{
+		if (n < 0)
+		{
+			write(1, "-", 1);
+			n = -n;
+		}
+		if (n >= len)
+		{
+			ft_putnbr_base(n / len, base);
+			ft_putnbr_base(n % len, base);
+		}
+		else
+			write(1, &base[n], 1);
+	}
 }
