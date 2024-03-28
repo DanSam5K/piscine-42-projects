@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 22:39:47 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/28 22:43:27 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/28 22:45:21 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,9 @@ int ft_iterative_factorial(int nb)
 	}
 	return (res);
 }
+
+// int main()
+// {
+// 	printf("%d\n", ft_iterative_factorial(5));
+// 	return (0);
+// }
