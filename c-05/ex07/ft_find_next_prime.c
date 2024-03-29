@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 20:26:20 by dansam            #+#    #+#             */
-/*   Updated: 2024/03/29 20:30:59 by dansam           ###   ########.fr       */
+/*   Updated: 2024/03/29 20:34:00 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,19 @@ int ft_is_prime(int nb)
 	else
 		return (0);
 }
+
+int ft_find_next_prime(int nb)
+{
+	while (ft_is_prime(nb) == 0)
+		nb++;
+	return (nb);
+}
+
+// int main()
+// {
+// 	printf("%d\n", ft_find_next_prime(0));
+// 	printf("%d\n", ft_find_next_prime(1));
+// 	printf("%d\n", ft_find_next_prime(2));
+// 	printf("%d\n", ft_find_next_prime(3));
+// 	printf("%d\n", ft_find_next_prime(4));
+// }
