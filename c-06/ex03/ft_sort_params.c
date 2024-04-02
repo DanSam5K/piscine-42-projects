@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 13:28:35 by dansam            #+#    #+#             */
-/*   Updated: 2024/04/02 13:38:37 by dansam           ###   ########.fr       */
+/*   Updated: 2024/04/02 13:39:15 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,10 @@ void ft_sort_params(int argc, char **argv)
 		i++;
 	}
 	ft_print_params(argc, argv);
+}
+
+int main(int argc, char **argv)
+{
+	ft_sort_params(argc, argv);
+	return (0);
 }
