@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 13:30:10 by dansam            #+#    #+#             */
-/*   Updated: 2024/04/06 13:33:02 by dansam           ###   ########.fr       */
+/*   Updated: 2024/04/06 13:42:51 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,18 @@ int *ft_range(int min, int max)
 	}
 	return (range);
 }
+
+// int main()
+// {
+// 	int min = 5;
+// 	int max = 10;
+// 	int *range = ft_range(min, max);
+// 	int i = 0;
+// 	while (i < max - min)
+// 	{
+// 		printf("%d\n", range[i]);
+// 		i++;
+// 	}
+// 	free(range);
+// 	return (0);
+// }
