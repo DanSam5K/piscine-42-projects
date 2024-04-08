@@ -6,7 +6,7 @@
 /*   By: dansam <dansam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 13:00:48 by dansam            #+#    #+#             */
-/*   Updated: 2024/04/08 13:05:15 by dansam           ###   ########.fr       */
+/*   Updated: 2024/04/08 13:11:05 by dansam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,39 @@ char *ft_create_str(int size, char **strs, char *sep)
 	str[k] = '\0';
 	return (str);
 }
+
+char *ft_strjoin(int size, char **strs, char *sep)
+{
+	char *str;
+	int i;
+	int total_len;
+
+	if (size == 0)
+	{
+		str = (char *)malloc(sizeof(char));
+		if (str == NULL)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
+	total_len = 0;
+	i = 0;
+	while (i < size)
+	{
+		total_len += ft_strlen(strs[i]);
+		i++;
+	}
+	total_len += ft_strlen(sep) * (size - 1);
+	str = ft_create_str(size, strs, sep);
+	return (str);
+}
+
+// int main()
+// {
+// 	char *strs[] = {"Hello", "World", "!"};
+// 	char *sep = " ";
+// 	char *str = ft_strjoin(3, strs, sep);
+// 	printf("%s\n", str);
+// 	free(str);
+// 	return (0);
+// }
